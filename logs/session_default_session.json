@@ -1,0 +1,111 @@
+[
+  {
+    "timestamp": "2026-09-17T17:59:24.695274Z",
+    "session_id": "default_session",
+    "insurer": "General / No specific insurer",
+    "query": "do I need to cover family members with RAMQ coverage",
+    "response": "In Quebec, prescription drug insurance is mandatory for all permanent residents. Whether you must cover your family members under a private plan or through the public Régie de l’assurance maladie du Québec (RAMQ) plan depends entirely on your access to private group insurance.\n\n---\n\n### 1. If You Have Access to a Private Group Insurance Plan\nIf you, your spouse, or your parents are eligible for a private group insurance plan (e.g., through an employer, union, or professional association), **you cannot choose RAMQ coverage**. \n\nUnder Quebec law:\n* **Mandatory Enrollment:** You must join the private plan.\n* **Mandatory Family Coverage:** You **must** provide coverage under your private plan for your spouse and children. They cannot remain on the RAMQ public prescription drug plan if a private plan is available to them through you.\n\nThe private group insurance plan must cover:\n* **You** (the plan member)\n* **Your spouse**\n* **Your children who are minors** (17 and under)\n* **Your children under age 25**, provided they are full-time students\n\n---\n\n### 2. If You Do Not Have Access to a Private Group Insurance Plan\nIf you do not have access to any private group insurance plan, you and your family must register for the **RAMQ Public Prescription Drug Insurance Plan**. \n\nUnder the public plan, your family members are covered as follows:\n* **Children 17 or under** are covered under the RAMQ public plan if their parents are covered by the public plan.\n* **Children aged 18 to 25** are covered under the RAMQ public plan if they are full-time students, live with their parents, and their parents are covered by the RAMQ public plan.\n\n---\n\n### Summary of Obligations\n| Your Situation | Can you/your family use RAMQ? | What you must do |\n| :--- | :--- | :--- |\n| **Eligible for private group insurance** | **No** | You must enroll in the private plan and add your spouse and eligible children to your coverage. |\n| **No access to private group insurance** | **Yes** | You must register yourself and your eligible family members with the RAMQ public prescription drug plan. |\n\n---\n\n### Sources & Regulatory Links\n* [Autorité des marchés financiers (AMF) - Group Insurance](https://lautorite.qc.ca/en/general-public/insurance/group-insurance)\n* [RAMQ - Prescription Drug Insurance](https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance)",
+    "sources": [
+      {
+        "url": "https://lautorite.qc.ca/en/general-public/insurance/group-insurance",
+        "snippet": "The RAMQ public plan is intended for persons who:\n  * Don’t have access to private insurance, for example, group insurance; (If you’re eligible for gr..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "## See also\nRelated pages\n  * [Obtain a new Health Insurance Card](https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/obtain-new-card)\n  * [Obta..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "Practical information\nWorker from another Canadian province or territory\nAre you a Canadian citizen or permanent resident coming to Québec to work tem..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "## When does your coverage starts?\n### Persons arriving from another country\nWhen you register for health insurance, your coverage usually begins afte..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "Ineligible? You can still access health care and services, but you have to pay for them.\nAdditional information\nAre you looking for information on pre..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "# Know the eligibility conditions for health insurance\nTo qualify for the Québec Health Insurance Plan and remain eligible, you have to meet the eligi..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "#### Presence in Québec rule for persons settled in Québec\nTo remain eligible for health insurance, you must not be absent from Québec 183 days or mor..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "### Persons arriving from another Canadian province or territory\nWhen you register for health insurance, your coverage usually begins after a maximum ..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "Your status may change over time, depending on the immigration documents you hold.\nPractical information\nBirth in Québec\nA person **born in Québec** i..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "## Health insurance in brief\n  * To benefit from covered health care free of charge, you must present your **valid** Health Insurance Card each time y..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance",
+        "snippet": "![](https://www.ramq.gouv.qc.ca/sites/default/files/styles/large/public/images/bandeau-assurance-medicaments.jpg?itok=Xh5cuwvT)\n# Prescription Drug In..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "* [ Citizens Current section ](https://www.ramq.gouv.qc.ca/en/citizens)\n    * [ Health Insurance Section active](https://www.ramq.gouv.qc.ca/en/citize..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "* [ Citizens Current section ](https://www.ramq.gouv.qc.ca/en/citizens)\n    * [ Health Insurance Section active](https://www.ramq.gouv.qc.ca/en/citize..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance",
+        "snippet": "* [ Citizens Current section ](https://www.ramq.gouv.qc.ca/en/citizens)\n    * [ Health Insurance ](https://www.ramq.gouv.qc.ca/en/citizens/health-insu..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance",
+        "snippet": "* [ Citizens Current section ](https://www.ramq.gouv.qc.ca/en/citizens)\n    * [ Health Insurance ](https://www.ramq.gouv.qc.ca/en/citizens/health-insu..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "### Exceptions to the application of the waiting period\nYou can benefit from **an exception** and be entitled to health insurance as soon as you regis..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "1. [Home](https://www.ramq.gouv.qc.ca/en)\n  2. [Health Insurance](https://www.ramq.gouv.qc.ca/en/citizens/health-insurance)..."
+      },
+      {
+        "url": "https://lautorite.qc.ca/en/general-public/insurance/group-insurance",
+        "snippet": "![](https://lautorite.qc.ca/fileadmin/_processed_/f/9/csm_assurances-collectives_faee81e1ac.jpg)\nGroup insurance is often one of the fringe benefits o..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "Cookie settingsACCEPT ALL\n[ Skip to main content ](https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions#main-content)\n..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "[![Régie de l'assurance maladie du Québec](https://www.ramq.gouv.qc.ca/themes/custom/ramq/assets/images/RAMQ.SVG) ](https://www.ramq.gouv.qc.ca/en)\n[©..."
+      },
+      {
+        "url": "https://lautorite.qc.ca/en/general-public/insurance/group-insurance",
+        "snippet": "End of the insight\n## When you don’t have access to group insurance\nThere are insurance products sold on an individual basis. They are designed for se..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance",
+        "snippet": "## Private prescription drug insurance plans\nYou may have access to a private plan, for instance through your employment, or your spouse or parents. I..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+        "snippet": "Launch search\n  * [Français](https://www.ramq.gouv.qc.ca/fr/citoyens/assurance-maladie/connaitre-conditions-admissibilite)\n  * [Contact us](https://ww..."
+      },
+      {
+        "url": "https://www.ramq.gouv.qc.ca/en/citizens/prescription-drug-insurance",
+        "snippet": "* [Health insurance or prescription drug insurance: what’s the difference?](https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/health-prescripti..."
+      },
+      {
+        "url": "https://www.desjardins.com/en/insurance/group.html",
+        "snippet": "Go to our [secure site](https://www.agea-gbim.dsf-dfs.com/AGEA-GBIM/Athntfctn/Authentification_Authentication.aspx?bhcp=1&cltr=en-CA). Under **Your ac..."
+      }
+    ]
+  }
+]
