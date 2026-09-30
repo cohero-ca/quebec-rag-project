@@ -1,6 +1,49 @@
-import os
-import requests
 import streamlit as st
+import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+FIREBASE_API_KEY = os.getenv("FIREBASE_API_KEY")
+
+# --- Authentication Function ---
+def login_user(email, password):
+    url = f"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={FIREBASE_API_KEY}"
+    payload = {"email": email, "password": password, "returnSecureToken": True}
+    response = requests.post(url, json=payload)
+    return response.json()
+
+# --- Session State Initialization ---
+if "id_token" not in st.session_state:
+    st.session_state.id_token = None
+    st.session_state.tenant_id = None
+
+# --- Login Screen ---
+if not st.session_state.id_token:
+    st.title("Plan Sponsor Portal")
+    email = st.text_input("Email")
+    password = st.text_input("Password", type="password")
+    
+    if st.button("Login"):
+        auth_res = login_user(email, password)
+        if "idToken" in auth_res:
+            st.session_state.id_token = auth_res["idToken"]
+            st.session_state.tenant_id = auth_res["localId"]
+            st.rerun()
+        else:
+            st.error("Invalid email or password. Please try again.")
+    
+    st.stop()
+
+# --- Chatbot UI (Only visible if logged in) ---
+st.sidebar.button("Logout", on_click=lambda: st.session_state.clear() or st.rerun())
+
+st.title("Enhanced HR Chatbot")
+st.write(f"Securely connected. Tenant ID: `{st.session_state.tenant_id}`")
+
+
+st.write(f"Securely connected. Tenant ID: {st.session_state.tenant_id}")
 
 st.set_page_config(page_title="Quebec Insurance RAG", page_icon="⚖️", layout="wide")
 
