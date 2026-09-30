@@ -1,0 +1,7 @@
+crawl4ai
+google-genai
+python-dotenv
+numpy
+playwright
+chromadb
+streamlit==1.64.0

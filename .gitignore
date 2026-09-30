@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Vector store & local database caches (optional: omit if chroma_db is built at runtime)
+# chroma_db/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+gcp-key.json
+chroma_db/
+logs/
+*.tar.gz
+.env
