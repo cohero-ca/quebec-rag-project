@@ -1,21 +1,35 @@
 import os
+import sys
 import asyncio
+import json
 from crawl4ai import AsyncWebCrawler
-from src.config import QUEBEC_SOURCES
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from src.config import QUEBEC_SOURCES, SOURCE_CATEGORIES
 
 def update_config_url(original_url: str, fallback_url: str):
-    """Replaces original_url with fallback_url inside src/config.py."""
     config_path = os.path.join("src", "config.py")
     if not os.path.exists(config_path):
         return
         
     with open(config_path, "r", encoding="utf-8") as f:
-        content = f.read()
+        lines = f.readlines()
         
-    if original_url in content:
-        new_content = content.replace(original_url, fallback_url)
+    updated = False
+    new_lines = []
+    for line in lines:
+        if line.strip().startswith("#"):
+            new_lines.append(line)
+        elif original_url in line:
+            new_lines.append(line.replace(original_url, fallback_url))
+            updated = True
+        else:
+            new_lines.append(line)
+            
+    if updated:
         with open(config_path, "w", encoding="utf-8") as f:
-            f.write(new_content)
+            f.writelines(new_lines)
         print(f"  📝 Updated src/config.py: '{original_url}' ➔ '{fallback_url}'")
 
 async def crawl_quebec_sources(urls=None):
@@ -26,9 +40,9 @@ async def crawl_quebec_sources(urls=None):
 
     async with AsyncWebCrawler(verbose=False) as crawler:
         for url in target_urls:
+            category = SOURCE_CATEGORIES.get(url, "core")
             success = False
             
-            # 1. Primary Scrape Attempt
             try:
                 result = await crawler.arun(url=url)
                 markdown_content = getattr(result, 'markdown', '') or getattr(getattr(result, 'markdown_v2', None), 'raw_markdown', '')
@@ -37,16 +51,16 @@ async def crawl_quebec_sources(urls=None):
                 if result.success and markdown_content.strip() and status_code < 400:
                     documents.append({
                         "url": url,
+                        "category": category,
                         "text": markdown_content
                     })
-                    print(f"  ✓ Successfully scraped: {url}")
+                    print(f"  ✓ [{category.upper()}] Successfully scraped: {url}")
                     success = True
                 else:
                     print(f"  ⚠️ Direct scrape failed or blocked: {url} (Status: {status_code})")
             except Exception as e:
                 print(f"  ❌ Error direct scraping {url}: {e}")
 
-            # 2. Dynamic Fallback Attempt
             if not success and "web.archive.org/web/" not in url:
                 fallback_url = f"https://web.archive.org/web/{url}"
                 print(f"  🔄 Attempting Wayback Machine fallback: {fallback_url}")
@@ -59,13 +73,25 @@ async def crawl_quebec_sources(urls=None):
                     if fb_result.success and fb_markdown.strip() and fb_status < 400:
                         documents.append({
                             "url": fallback_url,
+                            "category": category,
                             "text": fb_markdown
                         })
-                        print(f"  ✓ Successfully scraped fallback: {fallback_url}")
+                        print(f"  ✓ [{category.upper()}] Successfully scraped fallback: {fallback_url}")
                         update_config_url(url, fallback_url)
                     else:
                         print(f"  ❌ Fallback failed for: {fallback_url} (Status: {fb_status})")
                 except Exception as fb_err:
                     print(f"  ❌ Error scraping fallback {fallback_url}: {fb_err}")
 
+    if documents:
+        output_dir = os.path.join("data", "raw")
+        os.makedirs(output_dir, exist_ok=True)
+        output_file = os.path.join(output_dir, "scraped_documents.json")
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(documents, f, indent=2, ensure_ascii=False)
+        print(f"💾 Saved {len(documents)} document(s) to '{output_file}'")
+
     return documents
+
+if __name__ == "__main__":
+    asyncio.run(crawl_quebec_sources())

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
+/* ========================================== */
+/* FREEZE FRAME: ASSISTANT HEADER             */
+/* ========================================== */
+div.step:first-of-type {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    background-color: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    padding: 15px 25px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0 0 12px 12px !important;
+    margin-top: -10px !important;
+}
+
+div.step:first-of-type h3 {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px !important;
+    color: #ffffff !important; /* FIXED: Always white text */
+}
+
+div.step:first-of-type .text-xs,
+div.step:first-of-type .text-muted-foreground,
+div.step:first-of-type .cl-actionbar {
+    display: none !important;
+}
+
+/* Hide the native Vault button so it doesn't clutter chat */
+button[id*="manage_vault"], button[id*="action-manage_vault"] {
+    display: none !important;
+}
+
+/* ========================================== */
+/* BRAND COLOR FORCE-OVERRIDES                */
+/* ========================================== */
+/* Force Send Button and Avatars to be Cohero Blue */
+.cl-avatar, span[class*="AvatarFallback"] {
+    background-color: #004daa !important;
+}
+
+#ask-button, button[type="submit"] {
+    background-color: #004daa !important;
+    color: white !important;
+}
+
+#ask-button:hover, button[type="submit"]:hover {
+    background-color: #e57200 !important;
+}
+
+/* ========================================== */
+/* FLOATING LOGO (Bottom Right)               */
+/* ========================================== */
+.floating-logo {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 99999 !important;
+    width: 150px !important;
+    height: auto !important;
+    opacity: 0.85 !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+    pointer-events: none;
+}
+
+#chat-input {
+    min-height: 75px !important;
+    padding-top: 12px !important;
+}
